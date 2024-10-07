@@ -92,7 +92,7 @@ $(document).ready(function(){
     });
 
     var vidHeight = $('#vid').height()
-    $('.transparent').css('height', vidHeight);
+    $('.transparent').css('height', vidHeight/2);
 });
 
 // scroll to top page

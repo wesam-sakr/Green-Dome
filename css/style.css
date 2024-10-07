@@ -669,7 +669,7 @@ header .header-content .owl-carousel .owl-dots::before{
    background: var(--main-color);
    padding-block: 4rem;
    position: fixed;
-   bottom: 10%;
+   bottom: 0%;
    width: 100%;
    z-index: -1;
 }
@@ -678,6 +678,9 @@ header .header-content .owl-carousel .owl-dots::before{
    height: 450px;
    border-radius: 20px;
    overflow: hidden;
+}
+.transparent{
+   pointer-events: none
 }
 
 .video-wrap:hover img {
