@@ -42,20 +42,21 @@ $(document).ready(function(){
         responsiveClass: true,
         items: 1,
         rtl: dirAr,
-        // slideTransition: `linear`,
-        // animateOut: true,
-        // animateIn:true,
+        animateIn: 'fadeInLeft',
         dots: true,
         margin: 20
     });
     
-    $('.staff .owl-carousel').owlCarousel({
-        loop:true,
+    $('.blogs .owl-carousel').owlCarousel({
+        // loop:true,
         margin:20,
         responsiveClass:true,
         rtl:dirAr,
         autoplay:true,
-        nav:false,
+        nav:true,
+        animateIn: 'fadeInLeft',
+        navText:[`<i class="fa-solid fa-chevron-left"></i>`,`<i class="fa-solid fa-chevron-right"></i>`],
+        stagePadding: 30,
         responsive:{
             0:{
                 items:1,
@@ -64,7 +65,7 @@ $(document).ready(function(){
                 items:2,
             },
             1000:{
-                items:4,
+                items:3,
             }
         }
     });
@@ -91,8 +92,8 @@ $(document).ready(function(){
         }
     });
 
-    var vidHeight = $('#vid').height()
-    $('.transparent').css('height', vidHeight/2);
+    var vidHeight = $('#vid .video-wrap').outerHeight(true)
+    $('.transparent').css('height', vidHeight);
 });
 
 // scroll to top page
