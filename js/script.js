@@ -52,7 +52,7 @@ $(document).ready(function(){
         margin:20,
         responsiveClass:true,
         rtl:dirAr,
-        autoplay:true,
+        // autoplay:true,
         nav:true,
         animateIn: 'fadeInLeft',
         navText:[`<i class="fa-solid fa-chevron-left"></i>`,`<i class="fa-solid fa-chevron-right"></i>`],
