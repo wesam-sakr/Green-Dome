@@ -15,6 +15,12 @@
    --input: #FAFAFA;
    --white: #fff;
    --bs-gutter-x: 3.5rem;
+   
+}
+[dir=rtl] .container-fluid{
+   --bs-gutter-x: 3.5rem;
+   padding-left: var(--bs-gutter-x);
+   padding-right: var(--bs-gutter-x);
 }
 
 ::-webkit-scrollbar {
@@ -84,10 +90,20 @@ ul {
 }
 
 /* ------------- global --------------- */
-/* body{
+[dir=rtl] body{
    direction: rtl;
-   line-height: 1.7; 
-} */
+}
+[dir=rtl] [type=email], [type=number], [type=tel], [type=url] {
+   direction: rtl;
+}
+[dir=rtl] i[class*="fa-chevron"]{
+   transform: rotate(180deg);
+   -webkit-transform: rotate(180deg);
+   -moz-transform: rotate(180deg);
+   -ms-transform: rotate(180deg);
+   -o-transform: rotate(180deg);
+}
+
 #loading {
    position: fixed;
    top: 0;
@@ -712,6 +728,9 @@ header .header-content .owl-carousel .owl-dots::before {
    overflow: hidden;
    clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 100%, 0 85%);
 }
+[dir=rtl] .video-wrap{
+   clip-path: polygon(100% 0, 100% 85%, 90% 100%, 0 100%, 0 0);
+}
 
 .transparent {
    position: relative;
@@ -780,7 +799,9 @@ header .header-content .owl-carousel .owl-dots::before {
    -ms-border-radius: 20px;
    -o-border-radius: 20px;
 }
-
+[dir=rtl] .servWrapper{
+   clip-path: polygon(100% 0, 100% 100%, 9% 100%, 0 73%, 0 0);
+}
 .serv {
    text-align: center;
 }
@@ -828,6 +849,9 @@ header .header-content .owl-carousel .owl-dots::before {
    clip-path: polygon(0 0, 100% 0, 100% 80%, 83% 100%, 0 100%);
    background: var(--secondry-color);
 }
+[dir=rtl] .projects .card{
+   clip-path: polygon(100% 0, 100% 100%, 17% 100%, 0 80%, 0 0);
+}
 
 .projects .card .card-body {
    color: #fff;
@@ -856,6 +880,10 @@ header .header-content .owl-carousel .owl-dots::before {
    border: unset;
    overflow: hidden;
    border-radius: 25px;
+   color: #fff;
+}
+[dir=rtl] .blogs .card {
+   clip-path: polygon(100% 0, 100% 100%, 25% 100%, 0 85%, 0 0);
 }
 
 .blogs .card .card-img-top {
@@ -868,6 +896,10 @@ header .header-content .owl-carousel .owl-dots::before {
    object-fit: cover;
    border-radius: 20px;
    clip-path: polygon(0 0, 100% 0, 100% 76%, 76% 100%, 0 100%);
+}
+
+[dir=rtl] .blogs .card img {
+   clip-path: polygon(100% 0, 100% 100%, 20% 100%, 0 80%, 0 0);
 }
 
 .blogs .card .info {
@@ -911,6 +943,9 @@ header .header-content .owl-carousel .owl-dots::before {
    padding-inline-start: var(--bs-gutter-x);
    overflow: hidden;
    position: relative;
+}
+[dir=rtl] .newsLetterForm {
+   clip-path: polygon(80% 0, 100% 28%, 100% 100%, 0 100%, 0 0);
 }
 
 .newsLetter .overlay {
@@ -1081,6 +1116,9 @@ footer .navbar a {
    -o-border-radius: 20px;
    clip-path: polygon(100% 0, 100% 82%, 74% 100%, 0 100%, 0 0);
 }
+[dir=rtl] .mission-img img {
+   clip-path: polygon(100% 0, 100% 100%, 26% 100%, 0 82%, 0 0);
+}
 
 .MindSet {
    color: #fff;
@@ -1104,6 +1142,9 @@ footer .navbar a {
    background: url(../images/download.svg);
    background-size: contain;
    background-repeat: no-repeat;
+}
+[dir=rtl] .MindSet li::before {
+   transform: matrix(0, 1, 1, 0, 0, 0);
 }
 
 
@@ -1205,6 +1246,9 @@ footer .navbar a {
    clip-path: polygon(0 0, 100% 0, 100% 80%, 70% 100%, 0 100%);
    margin-bottom: 1.5rem;
 }
+[dir=rtl] .clientBox .clientImg {
+   clip-path: polygon(100% 0, 100% 100%, 30% 100%, 0 80%, 0 0);
+}
 
 .ClientName {
    font-weight: bold;
@@ -1296,6 +1340,9 @@ footer .navbar a {
    clip-path: polygon(0 0, 100% 0, 100% 83%, 84% 100%, 0 100%);
    margin-bottom: 1rem;
 }
+[dir=rtl] .blogs .blog_details .card {
+   clip-path: polygon(100% 0, 100% 100%, 16% 100%, 0 84%, 0 0);
+}
 
 .blogs .blog_details .card img {
    aspect-ratio: 2 / 1;
@@ -1303,7 +1350,9 @@ footer .navbar a {
    border-radius: 20px;
    clip-path: polygon(0 0, 100% 0, 100% 80%, 85% 100%, 0 100%);
 }
-
+.blogs .blog_details .card img {
+   clip-path: polygon(100% 0, 100% 100%, 16% 100%, 0 83%, 0 0);
+}
 .gallery .gallery-container {
    display: grid;
    grid-template-columns: repeat(24, minmax(0, 1fr));
@@ -1349,6 +1398,10 @@ footer .navbar a {
       --bs-gutter-x: 1.5rem;
    }
 
+   [dir=rtl] .container-fluid {
+      --bs-gutter-x: 1.5rem;
+   }
+
    nav.navbar>.container-fluid {
       flex-direction: row-reverse;
    }
@@ -1391,6 +1444,9 @@ footer .navbar a {
    :root {
       --bs-gutter-x: .75rem;
    }
+   [dir=rtl] .container-fluid {
+      --bs-gutter-x: .75rem;
+   }
 
    header img {
       height: 70vh;
@@ -1411,6 +1467,10 @@ footer .navbar a {
    .video-wrap {
       clip-path: polygon(0 0, 100% 0, 100% 100%, 20% 100%, 0 80%);
    }
+   [dir=rtl] .video-wrap {
+      clip-path: polygon(100% 0, 100% 80%, 74% 100%, 0 100%, 0 0);
+   }
+
 
    .newsLetterForm {
       padding: 6rem 2rem;
@@ -1419,6 +1479,9 @@ footer .navbar a {
    .servWrapper {
       padding-bottom: 3rem;
       clip-path: polygon(0 0, 100% 0, 100% 86%, 66% 100%, 0 100%);
+   }
+   [dir=rtl] .servWrapper {
+      clip-path: polygon(100% 0, 100% 100%, 24% 100%, 0 86%, 0 0);
    }
 
    footer .sub-footer .container-fluid {
